@@ -1,0 +1,92 @@
+{
+	"bench":{
+		"values":[
+			{"date":"07-11-2015", "value":100},
+			{"date":"24-11-2015", "value":110},
+			{"date":"26-11-2015", "value":115},
+			{"date":"03-12-2015", "value":130},
+			{"date":"05-12-2015", "value":150},
+			{"date":"08-12-2015", "value":150},
+			{"date":"13-12-2015", "value":160},
+			{"date":"15-12-2015", "value":160},
+			{"date":"18-12-2015", "value":170},
+			{"date":"19-12-2015", "value":150}
+		],
+		"isPounds":true,
+		"color":"bluesteele"
+	},
+		"deadlift": {
+			"values":[
+				{"date":"26-11-2015", "value":110},
+				{"date":"03-12-2015", "value":150},
+				{"date":"05-12-2015", "value":180},
+				{"date":"10-12-2015", "value":190},
+				{"date":"13-12-2015", "value":200},
+				{"date":"19-12-2015", "value":210}
+			],
+			"isPounds":true,
+			"color":"orange"
+		},
+		"incline-bench":{
+			"values":[
+				{"date":"10-12-2015", "value":90},
+				{"date":"12-12-2015", "value":100},
+				{"date":"15-12-2015", "value":110},
+				{"date":"19-12-2015", "value":110}
+			],
+			"isPounds":true,
+			"color":"purple"
+		},
+		"overhead-press":{
+			"values":[
+				{"date":"25-11-2015", "value":70},
+				{"date":"28-11-2015", "value":90},
+				{"date":"03-12-2015", "value":80},
+				{"date":"05-12-2015", "value":80},
+				{"date":"10-12-2015", "value":90},
+				{"date":"13-12-2015", "value":90},
+				{"date":"18-12-2015", "value":95}
+			],
+			"isPounds":true,
+			"color":"green"
+		},
+			"squat":{
+				"values":[
+					{"date":"08-11-2015", "value":120},
+					{"date":"03-12-2015", "value":130},
+					{"date":"04-12-2015", "value":160},
+					{"date":"05-12-2015", "value":165},
+					{"date":"08-12-2015", "value":170},
+					{"date":"10-12-2015", "value":175},
+					{"date":"13-12-2015", "value":180},
+					{"date":"18-12-2015", "value":190},
+					{"date":"19-12-2015", "value":160}
+				],
+				"isPounds":true,
+				"color":"pink"
+			},
+			"upright-row":{
+				"values":[
+					{"date":"11-11-2015", "value":70},
+					{"date":"17-11-2015", "value":80},
+					{"date":"24-11-2015", "value":80},
+					{"date":"28-11-2015", "value":85},
+					{"date":"01-12-2015", "value":90},
+					{"date":"05-12-2015", "value":95},
+					{"date":"08-12-2015", "value":100},
+					{"date":"13-12-2015", "value":100},
+					{"date":"15-12-2015", "value":100},
+					{"date":"19-12-2015", "value":100}
+				],
+				"isPounds":true,
+				"color":"#777777"
+			},
+			"weight":{
+				"values": [
+					{"date":"01-11-2015", "value":82},
+					{"date":"25-12-2015", "value":82}
+				],
+				"isPounds":false,
+				"color":"#BB3255"
+			}
+}
