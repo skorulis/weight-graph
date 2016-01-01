@@ -40,7 +40,7 @@ drawMainGraph();
 function drawMainGraph() {
 	d3.json("results.json", function(data) {
 	
-		var yExtant = [0,0]
+		var yExtant = [20,0]
 		var xExtant = [parseDate("25-12-2015"),0]
 	
 		for (var key in data) {
