@@ -1,45 +1,63 @@
+function makeSVG() {
+	return d3.select("body").append("svg")
+  .attr("width", width + margin.left + margin.right)
+  .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+}
+
+function makeYAxis(scale) {
+	return d3.svg.axis().scale(scale).orient("left");
+}
+
+function makeLine(scale) {
+	return d3.svg.line()
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return scale(d.value); });
+}
+
+function appendXAxis(svg,axis) {
+	svg.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(axis);
+}
+
+function appendYAxis(svg,axis) {
+	svg.append("g")
+			.attr("class", "y axis")
+			.call(axis)
+}
+
 var margin = {top: 20, right: 20, bottom: 30, left: 50},
     width = 960 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom;
     
-    
 var parseDate = d3.time.format("%d-%m-%Y").parse;
 var x = d3.time.scale().range([0, width]);
 var y = d3.scale.linear().range([height, 0]);
+var pointY = d3.scale.linear().range([height, 0]);
+var dumbellY  = d3.scale.linear().range([height, 0]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
     .orient("bottom");
     
-var yAxis = d3.svg.axis()
-	.scale(y)
-	.orient("left");
+var yAxis = makeYAxis(y);
+var pointYAxis = makeYAxis(pointY);
+var dumbellYAxis = makeYAxis(dumbellY);
 
-var line = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return y(d.value); });
+var line = makeLine(y)
+var pointLine = makeLine(pointY)
+var dumbellLine = makeLine(dumbellY)
 
-var svg = d3.select("body").append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var svg = makeSVG();
+var pointSVG = makeSVG();
+var dumbellSVG = makeSVG();
 
-var pointY = d3.scale.linear().range([height, 0]);
-
-var pointLine = d3.svg.line()
-    .x(function(d) { return x(d.date); })
-    .y(function(d) { return pointY(d.value); });
-
-var pointYAxis = d3.svg.axis()
-	.scale(pointY)
-	.orient("left");
-
-var pointSVG = d3.select("body").append("svg")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom)
-  .append("g")
-  .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+var graphByType = {points : pointSVG, dumbell : dumbellSVG, barbell : svg};
+var lineByType = {points : pointLine, dumbell : dumbellLine, barbell : line};
+var yByType = {points : pointY, dumbell : dumbellY, barbell : y};
     
 drawMainGraph();
 
@@ -48,10 +66,12 @@ function drawMainGraph() {
 	
 		var yExtant = [20,0]
 		var pointExtant = [600,0]
+		var dumbellExtant = [5,0]
 		var xExtant = [parseDate("25-12-2015"),0]
 	
 		for (var key in data) {
 			var values = data[key].values
+			var type = data[key].type
 			values.forEach(function(d) {
 				d.date = parseDate(d.date);
 				if (data[key].isPounds) {
@@ -61,12 +81,15 @@ function drawMainGraph() {
 			
 			tempX = d3.extent(values, function(d) {return d.date;});
 			tempY = d3.extent(values, function(d) {return d.value;});
-			if (key == "points") {
+			if (type == "points") {
 				pointExtant[0] = Math.min(pointExtant[0],tempY[0])
 				pointExtant[1] = Math.max(pointExtant[1],tempY[1])
-			} else {
+			} else if(type == "barbell") {
 				yExtant[0] = Math.min(yExtant[0],tempY[0])
 				yExtant[1] = Math.max(yExtant[1],tempY[1])
+			} else if (type == "dumbell") {
+				dumbellExtant[0] = Math.min(dumbellExtant[0],tempY[0])
+				dumbellExtant[1] = Math.max(dumbellExtant[1],tempY[1])
 			}
 			
 			xExtant[0] = Math.min(xExtant[0],tempX[0])
@@ -75,32 +98,25 @@ function drawMainGraph() {
 		
 		y.domain(yExtant)
 		pointY.domain(pointExtant)
+		dumbellY.domain(dumbellExtant)
 		x.domain(xExtant)
-		console.log(pointExtant)
-		svg.append("g")
-			.attr("class", "x axis")
-			.attr("transform", "translate(0," + height + ")")
-			.call(xAxis);
+		
+		appendXAxis(svg,xAxis)
+		appendXAxis(pointSVG,xAxis)
+		appendXAxis(dumbellSVG,xAxis)
 	
-		svg.append("g")
-			.attr("class", "y axis")
-			.call(yAxis)
-			
-		pointSVG.append("g")
-			.attr("class", "x axis")
-			.attr("transform", "translate(0," + height + ")")
-			.call(xAxis);
-	
-		pointSVG.append("g")
-			.attr("class", "y axis")
-			.call(pointYAxis)
+		appendYAxis(svg,yAxis)	
+		appendYAxis(pointSVG,pointYAxis)	
+		appendYAxis(dumbellSVG,dumbellYAxis)	
 		
 		for (var key in data) {
 			var color = data[key].color
 		
 			var values = data[key].values
-			var graph = key == "points" ? pointSVG : svg;
-			var l = key == "points" ? pointLine : line;
+			var type = data[key].type
+			var graph = graphByType[type]
+			var l = lineByType[type]
+			var yValues = yByType[type]
 
 			graph.append("path")
       .datum(values)
@@ -111,7 +127,7 @@ function drawMainGraph() {
       })
       
       graph.append("text")
-			.attr("transform", "translate(" + (width-50) + "," + y(values[values.length-1].value) + ")")
+			.attr("transform", "translate(" + (width-50) + "," + yValues(values[values.length-1].value) + ")")
 			.attr("dy", ".35em")
 			.attr("text-anchor", "start")
 			.style("fill", color)

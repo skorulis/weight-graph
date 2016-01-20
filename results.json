@@ -15,10 +15,12 @@
 			{"date":"02-01-2016", "value":170},
 			{"date":"06-01-2016", "value":180},
 			{"date":"10-01-2016", "value":185},
-			{"date":"12-01-2016", "value":160}
+			{"date":"12-01-2016", "value":160},
+			{"date":"17-01-2016", "value":190}
 		],
 		"isPounds":true,
-		"color":"bluesteele"
+		"color":"bluesteele",
+		"type":"barbell"
 	},
 		"deadlift": {
 			"values":[
@@ -30,10 +32,12 @@
 				{"date":"19-12-2015", "value":210},
 				{"date":"31-12-2015", "value":220},
 				{"date":"08-01-2016", "value":240},
-				{"date":"15-01-2016", "value":250}
+				{"date":"15-01-2016", "value":250},
+				{"date":"20-01-2016", "value":270}
 			],
 			"isPounds":true,
-			"color":"orange"
+			"color":"orange",
+			"type":"barbell"
 		},
 		"incline-bench":{
 			"values":[
@@ -45,10 +49,12 @@
 				{"date":"04-01-2016", "value":130},
 				{"date":"08-01-2016", "value":130},
 				{"date":"11-01-2016", "value":130},
-				{"date":"15-01-2016", "value":140}
+				{"date":"15-01-2016", "value":140},
+				{"date":"20-01-2016", "value":150}
 			],
 			"isPounds":true,
-			"color":"purple"
+			"color":"purple",
+			"type":"barbell"
 		},
 		"overhead-press":{
 			"values":[
@@ -62,10 +68,12 @@
 				{"date":"31-12-2015", "value":100},
 				{"date":"04-01-2016", "value":100},
 				{"date":"08-01-2016", "value":100},
-				{"date":"12-01-2016", "value":100}
+				{"date":"12-01-2016", "value":100},
+				{"date":"20-01-2016", "value":110}
 			],
 			"isPounds":true,
-			"color":"green"
+			"color":"green",
+			"type":"barbell"
 		},
 			"squat":{
 				"values":[
@@ -85,10 +93,12 @@
 					{"date":"10-01-2016", "value":210},
 					{"date":"11-01-2016", "value":220},
 					{"date":"12-01-2016", "value":200},
-					{"date":"15-01-2016", "value":220}
+					{"date":"15-01-2016", "value":220},
+					{"date":"20-01-2016", "value":250}
 				],
 				"isPounds":true,
-				"color":"pink"
+				"color":"pink",
+				"type":"barbell"
 			},
 			"upright-row":{
 				"values":[
@@ -107,7 +117,76 @@
 					{"date":"11-01-2016", "value":120}
 				],
 				"isPounds":true,
-				"color":"#777777"
+				"color":"#777777",
+				"type":"barbell"
+			},
+			"dumbell-pullover":{
+				"values":[
+					{"date":"20-01-2016", "value":55}
+				],
+				"isPounds":true,
+				"color":"#777777",
+				"type":"dumbell"
+			},
+			"arnold-press":{
+				"values":[
+					{"date":"10-01-2016", "value":30},
+					{"date":"17-01-2016", "value":35}
+				],
+				"isPounds":true,
+				"color":"bluesteele",
+				"type":"dumbell"
+			},
+			"flyes":{
+				"values":[
+					{"date":"18-12-2015", "value":25},
+					{"date":"04-01-2016", "value":30},
+					{"date":"06-01-2016", "value":35},
+					{"date":"11-01-2016", "value":40},
+					{"date":"17-01-2016", "value":40}
+				],
+				"isPounds":true,
+				"color":"orange",
+				"type":"dumbell"
+			},
+			"dumbell-bench-press":{
+				"values":[
+					{"date":"17-01-2016", "value":50}
+				],
+				"isPounds":true,
+				"color":"teal",
+				"type":"dumbell"
+			},
+			"lunges":{
+				"values":[
+					{"date":"19-12-2015", "value":30},
+					{"date":"04-01-2016", "value":40},
+					{"date":"08-01-2016", "value":35},
+					{"date":"17-01-2016", "value":45}
+				],
+				"isPounds":true,
+				"color":"teal",
+				"type":"dumbell"
+			},
+			"side-lateral-raise":{
+				"values":[
+					{"date":"03-12-2015", "value":20},
+					{"date":"05-12-2015", "value":22.5},
+					{"date":"08-12-2015", "value":20},
+					{"date":"10-12-2015", "value":20},
+					{"date":"11-12-2015", "value":22.5},
+					{"date":"12-12-2015", "value":17.5},
+					{"date":"15-12-2015", "value":20},
+					{"date":"18-12-2015", "value":20},
+					{"date":"19-12-2015", "value":22.5},
+					{"date":"31-12-2015", "value":20},
+					{"date":"06-01-2016", "value":22.5},
+					{"date":"08-01-2016", "value":17.5},
+					{"date":"12-01-2016", "value":22.5}
+				],
+				"isPounds":true,
+				"color":"teal",
+				"type":"dumbell"
 			},
 			"weight":{
 				"values": [
@@ -125,7 +204,8 @@
 					{"date":"15-01-2016", "value":81.5}
 				],
 				"isPounds":false,
-				"color":"#BB3255"
+				"color":"#BB3255",
+				"type":"barbell"
 			},
 			"points":{
 				"values": [
@@ -167,9 +247,12 @@
 					{"date":"10-01-2016", "value":2454},
 					{"date":"11-01-2016", "value":1804},
 					{"date":"12-01-2016", "value":2556},
-					{"date":"15-01-2016", "value":2565}
+					{"date":"15-01-2016", "value":2565},
+					{"date":"17-01-2016", "value":2221},
+					{"date":"20-01-2016", "value":2554}
 				],
 				"isPounds":false,
-				"color":"#BB3255"
+				"color":"#BB3255",
+				"type":"points"
 			}
 }
