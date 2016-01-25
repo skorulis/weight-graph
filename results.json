@@ -16,7 +16,9 @@
 			{"date":"06-01-2016", "value":180},
 			{"date":"10-01-2016", "value":185},
 			{"date":"12-01-2016", "value":160},
-			{"date":"17-01-2016", "value":190}
+			{"date":"17-01-2016", "value":190},
+			{"date":"17-01-2016", "value":150},
+			{"date":"15-01-2016", "value":200}
 		],
 		"isPounds":true,
 		"color":"bluesteele",
@@ -39,6 +41,16 @@
 			"color":"orange",
 			"type":"barbell"
 		},
+		"bent-over-row": {
+			"values":[
+				{"date":"20-01-2016", "value":110},
+				{"date":"22-01-2016", "value":130},
+				{"date":"25-01-2016", "value":140}
+			],
+			"isPounds":true,
+			"color":"orange",
+			"type":"barbell"
+		},
 		"incline-bench":{
 			"values":[
 				{"date":"10-12-2015", "value":90},
@@ -50,7 +62,8 @@
 				{"date":"08-01-2016", "value":130},
 				{"date":"11-01-2016", "value":130},
 				{"date":"15-01-2016", "value":140},
-				{"date":"20-01-2016", "value":150}
+				{"date":"20-01-2016", "value":150},
+				{"date":"22-01-2016", "value":155}
 			],
 			"isPounds":true,
 			"color":"purple",
@@ -69,7 +82,8 @@
 				{"date":"04-01-2016", "value":100},
 				{"date":"08-01-2016", "value":100},
 				{"date":"12-01-2016", "value":100},
-				{"date":"20-01-2016", "value":110}
+				{"date":"20-01-2016", "value":110},
+				{"date":"23-01-2016", "value":100}
 			],
 			"isPounds":true,
 			"color":"green",
@@ -94,7 +108,9 @@
 					{"date":"11-01-2016", "value":220},
 					{"date":"12-01-2016", "value":200},
 					{"date":"15-01-2016", "value":220},
-					{"date":"20-01-2016", "value":250}
+					{"date":"20-01-2016", "value":250},
+					{"date":"22-01-2016", "value":250},
+					{"date":"25-01-2016", "value":210}
 				],
 				"isPounds":true,
 				"color":"pink",
@@ -122,7 +138,8 @@
 			},
 			"dumbell-pullover":{
 				"values":[
-					{"date":"20-01-2016", "value":55}
+					{"date":"20-01-2016", "value":55},
+					{"date":"23-01-2016", "value":65}
 				],
 				"isPounds":true,
 				"color":"#777777",
@@ -162,7 +179,8 @@
 					{"date":"19-12-2015", "value":30},
 					{"date":"04-01-2016", "value":40},
 					{"date":"08-01-2016", "value":35},
-					{"date":"17-01-2016", "value":45}
+					{"date":"17-01-2016", "value":45},
+					{"date":"23-01-2016", "value":50}
 				],
 				"isPounds":true,
 				"color":"teal",
@@ -182,7 +200,9 @@
 					{"date":"31-12-2015", "value":20},
 					{"date":"06-01-2016", "value":22.5},
 					{"date":"08-01-2016", "value":17.5},
-					{"date":"12-01-2016", "value":22.5}
+					{"date":"12-01-2016", "value":22.5},
+					{"date":"22-01-2016", "value":25},
+					{"date":"25-01-2016", "value":20}
 				],
 				"isPounds":true,
 				"color":"teal",
@@ -201,7 +221,8 @@
 					{"date":"10-01-2016", "value":81.5},
 					{"date":"11-01-2016", "value":81},
 					{"date":"12-01-2016", "value":82},
-					{"date":"15-01-2016", "value":81.5}
+					{"date":"15-01-2016", "value":81.5},
+					{"date":"23-01-2016", "value":82.5}
 				],
 				"isPounds":false,
 				"color":"#BB3255",
@@ -249,7 +270,9 @@
 					{"date":"12-01-2016", "value":2556},
 					{"date":"15-01-2016", "value":2565},
 					{"date":"17-01-2016", "value":2221},
-					{"date":"20-01-2016", "value":2554}
+					{"date":"20-01-2016", "value":2554},
+					{"date":"22-01-2016", "value":2622},
+					{"date":"23-01-2016", "value":2434}
 				],
 				"isPounds":false,
 				"color":"#BB3255",
