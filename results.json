@@ -40,7 +40,8 @@
 				{"date":"20-01-2016", "value":270},
 				{"date":"28-01-2016", "value":270},
 				{"date":"01-02-2016", "value":250},
-				{"date":"05-02-2016", "value":270}
+				{"date":"05-02-2016", "value":270},
+				{"date":"10-02-2016", "value":280}
 			],
 			"isPounds":true,
 			"color":"orange",
@@ -125,7 +126,8 @@
 					{"date":"30-01-2016", "value":255},
 					{"date":"01-02-2016", "value":210},
 					{"date":"05-02-2016", "value":270},
-					{"date":"08-02-2016", "value":250}
+					{"date":"08-02-2016", "value":250},
+					{"date":"10-02-2016", "value":280}
 				],
 				"isPounds":true,
 				"color":"pink",
@@ -167,7 +169,8 @@
 				"values":[
 					{"date":"10-01-2016", "value":30},
 					{"date":"17-01-2016", "value":35},
-					{"date":"30-01-2016", "value":40}
+					{"date":"30-01-2016", "value":40},
+					{"date":"10-02-2016", "value":45}
 				],
 				"isPounds":true,
 				"color":"bluesteele",
@@ -181,7 +184,8 @@
 					{"date":"11-01-2016", "value":40},
 					{"date":"17-01-2016", "value":40},
 					{"date":"28-01-2016", "value":45},
-					{"date":"01-02-2016", "value":50}
+					{"date":"01-02-2016", "value":50},
+					{"date":"10-02-2016", "value":45}
 				],
 				"isPounds":true,
 				"color":"orange",
@@ -251,7 +255,8 @@
 					{"date":"30-01-2016", "value":82.5},
 					{"date":"03-02-2016", "value":83},
 					{"date":"05-02-2016", "value":82.5},
-					{"date":"08-02-2016", "value":83}
+					{"date":"08-02-2016", "value":83},
+					{"date":"10-02-2016", "value":83}
 				],
 				"isPounds":false,
 				"color":"#BB3255",
@@ -307,7 +312,8 @@
 					{"date":"01-02-2016", "value":2070},
 					{"date":"03-02-2016", "value":2446},
 					{"date":"05-02-2016", "value":2957},
-					{"date":"08-02-2016", "value":2671}
+					{"date":"08-02-2016", "value":2671},
+					{"date":"10-02-2016", "value":1945}
 				],
 				"isPounds":false,
 				"color":"#BB3255",
